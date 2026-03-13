@@ -56,7 +56,13 @@ CLAUDE_CODE_OAUTH_TOKEN=your_claude_code_oauth_token
 CHANNEL_CONFIG='[{"id":"123456789","name":"general","mode":"full"}]'
 ```
 
-To get the OAuth token, run `claude` locally and copy the token, or use `claude setup-token`.
+To get the OAuth token, run this on a machine where you're already logged into Claude Code:
+
+```bash
+claude setup-token
+```
+
+This prints a `CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...` line you can paste directly into `.env`.
 
 To find a channel ID, enable Developer Mode in Discord settings, then right-click a channel and click "Copy Channel ID".
 
