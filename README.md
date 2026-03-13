@@ -32,7 +32,7 @@ Claude never responds through stdout. All user-visible messages go through the i
 
 ## Requirements
 
-- A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) subscription (Max or Team plan)
+- A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) subscription (Pro, Max, Team, or Enterprise plan)
 - Docker (recommended) or Python 3.12+ with the Claude CLI installed
 - A Discord bot token with Message Content Intent enabled
 
