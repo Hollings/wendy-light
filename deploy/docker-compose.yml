@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  bot:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    container_name: claude-discord-bot
+    init: true
+    restart: unless-stopped
+    command: ["python", "-m", "wendy"]
+    network_mode: host
+    volumes:
+      - bot_data:/data/wendy
+      - claude_config:/root/.claude
+      - ./config:/app/config:ro
+    env_file:
+      - ../.env
+    environment:
+      - WENDY_DB_PATH=/data/wendy/shared/wendy.db
+      - SYSTEM_PROMPT_FILE=/app/config/system_prompt.txt
+
+volumes:
+  bot_data:
+  claude_config:
